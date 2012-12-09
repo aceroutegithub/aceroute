@@ -1,0 +1,1 @@
+Ext.ns("Ext.AceRoute.controller","Ext.AceRoute.view");Ext.AceRoute.controller.Controller=Class.extend({init:function(){}});Ext.AceRoute.view.View=Class.extend({init:function(controller){this.controller=controller;}});Ext.AceRoute.util.Util=Class.extend({init:function(){}});

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+   <head>
+        <title>jQuery mobile with Google maps - Google maps jQuery plugin</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"> </script>
+        <script type="text/javascript">
+
+            var cityList = [
+                ['Chicago', 41.850033, -87.6500523, 1],
+                ['Illinois', 40.797177,-89.406738, 2]
+            ];
+
+            var demoCenter = new google.maps.LatLng(41,-87);
+
+            var map;
+            function initialize()
+            {
+                map = new google.maps.Map(document.getElementById('map_canvas'), {
+                   zoom: 7,
+                   center: demoCenter,
+                   mapTypeId: google.maps.MapTypeId.ROADMAP
+                 });
+            }
+
+            function addMarkers()
+            {
+                var marker, i;
+                var infowindow = new google.maps.InfoWindow();
+                for (i = 0; i < cityList.length; i++) 
+                {  
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(cityList[i][1], cityList[i][2]),
+                        map: map,
+                        title: cityList[i][0]
+                    });
+
+                    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                        return function() {
+                            infowindow.setContent(cityList[i][0]);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker, i));
+                }
+            }
+
+            $(document).ready(function() 
+            {
+                $('.add-markers').click(function() {
+                    addMarkers();
+                });
+            });
+        </script>
+    </head>
+    <body onload="initialize()">
+        <div id="basic-map" data-role="page">
+            <div data-role="header">
+                <h1><a data-ajax="false" href="/">jQuery mobile with Google maps v3</a> examples</h1>
+                <a data-rel="back">Back</a>
+            </div>
+            <div data-role="content">   
+                <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                    <div id="map_canvas" style="height:350px;"></div>
+                </div>
+                <a href="#" class="add-markers" data-role="button" data-theme="b">Vikas Add Some More Markers</a>
+            </div>
+        </div>      
+    </body>
+</html>

@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+	<head>   
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/resources/css/jQuery/jqm-datebox-1.1.0.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/jQuery/jquery.mobile-1.2.0.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/jQuery/jquery.mobile.structure-1.2.0.min.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/jQuery/jquery.mobile.theme-1.2.0.min.css" type="text/css">
+	     
+    <script type="text/javascript" src="/js/jQuery/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="/js/jQuery/jquery.mobile-1.2.0.js"></script>
+	
+	<script type="text/javascript" src="/js/jQuery/jqm-datebox-1.1.0.core.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jqm-datebox-1.1.0.mode.calbox.js"></script>
+	<script type="text/javascript" src="/js/jQuery/jqm-datebox-1.1.0.mode.datebox.js"></script>
+	
+	<script type="text/javascript" src="/js/aceroute/appStartup.js"></script>
+	
+</head>
+<body>
+
+	<div class="content-primary">
+    
+<div id="discover1" data-role="page" class="l2">
+    <header data-role="header" data-position="fixed" class="header-with-navbar" data-tap-toggle="false" data-id="pinboard">
+    <h1>Clipboard</h1>
+
+    <a href="/rides/add" class="ui-btn-right" rel="external" data-iconpos="notext" data-icon="add">Add</a>
+    <div class="line-above-navbar"></div>
+    <div data-role="navbar" class="navbar-in-header" >
+        <ul>
+            <li><a href="/home/index" id="panelToogethrButton"  class="ui-btn-active"  data-role="button">Destination</a></li>
+            <li><a href="/home/nearby" id="panelNearbyButton"  data-role="button">Nearby</a></li>
+            <li><a href="/home/actual" id="panelActualButton"  data-role="button">Upcoming</a></li>
+        </ul>
+    </div>
+</header>
+
+    <article id="main" role="main" data-role="content">
+        <div id="panelToogethr">
+
+            <div class="explain welcome">
+
+
+
+                <div  style="float: right;margin-top:0px;margin-right: -10px">
+
+                                    </div>
+
+
+                <h1>Toogethr, the rideshare app</h1>
+
+                                                Welcome! Search instantly on offered or requested rides.                <div style="margin-top: 8px;"></div>
+                <div class="fb-like" data-href="https://www.facebook.com/Toogethr"
+                     data-send="false" data-layout="button_count" data-width="350" data-show-faces="false"></div>
+                <div style="clear:both"></div>
+            </div>
+
+            <div class="explain form search whereDoYouGo">
+                <fieldset>
+                    <label for="discover1to" class="overlay">Where are you going?</label>
+                    <div class="searchbox clear-group">
+                        <input id="discover1to" class="input-ride-to" name="to" type="text" placeholder="Address, city, postal code, poi">
+                        <span class="ui-icon ui-icon-clearfield">Clear</span>
+                    </div>
+                </fieldset>
+
+                <div class="container_12" style="margin-top: -5px;">
+                    <div class="grid_7" >
+                        <ul id="myGroupLinks" class="list list-inline list-inline-comma" style="margin-top:10px; padding-bottom: 0px;">
+                        </ul>
+                    </div>
+                    <div class="grid_5">
+                        <a href="/home/results" id="pinboard-search-button" class="right-aligned"
+                           data-theme="a" data-role="button" >Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+     
+        
+
+
+
+
+        
+   
+    </article>
+    
+<div class="footer" data-role="footer" data-position="fixed" data-tap-toggle="false" data-id="myfooter">
+        <div class="notificationsBox" style="display:none">
+        </div>
+<div class="messageBar">
+</div>
+<div class="alertBar">
+                <div class="message tryout">
+            <div class="icon"></div>
+            <div class="text">Tryout mode: <a href="https://m.toogethr.com/login/signup">Register</a> or <a href="https://m.toogethr.com/login">Log in</a></div>
+        </div>
+    
+    </div>
+
+        <div data-role="navbar" role="navigation">
+        <ul>
+            <li>
+                <a id="discover"  data-icon="t-search"
+                   class=" ui-btn-active "
+                   href="/home/index">Clipboard</a>
+            </li>
+
+                         <li>
+                <a id="account"
+                   class=""
+                                                                data-icon="t-profile"
+                        href="/home/index?login=true">My Toogethr
+                                                                            </a>
+            </li>
+            <li>
+                <a id="netwerken" data-icon="t-groups"
+                   class=""
+                                       href="/group/all"                     >Groups</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+
+    </div>
+
+</body>
+</html>

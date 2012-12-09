@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+	<head>   
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<link type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" rel="stylesheet" /> 
+	<link rel="stylesheet" href="/resources/css/jQuery/jquery.mobile-1.2.0.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/jQuery/jquery.mobile.theme-1.2.0.min.css" type="text/css">
+	<link rel="stylesheet" href="/resources/css/aceroute.css" type="text/css">
+	     
+    <script type="text/javascript" src="/js/jQuery/jquery-1.8.2.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.js"></script>
+	
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	
+	<script type="text/javascript" src="/js/aceroute/util/commonUtil.js"></script>
+	<script type="text/javascript" src="/js/aceroute/appStartup.js"></script>
+	
+</head>
+<body>
+
+	<div id="page-2" data-role="page" data-fullscreen="true">
+	
+		<div data-role="header">
+	        <div data-role="fieldcontain" >
+			 	<input name="mydate" id="mydate" type="date" data-role="datebox"
+   data-options='{"mode": "calbox", "calUsePickers": true, "calNoHeader": true}'>
+		 	</div>
+	    </div>
+	    <div data-role="content">
+	        <div data-role="collapsible-set" data-theme="b" data-content-theme="d">
+				<div id="orderlist" data-role="collapsible">
+					<h2>My Orders</h2>
+					<ul data-role="listview" data-divider-theme="d">
+						
+					</ul>
+				</div>
+				<div data-role="collapsible">
+					<h2>Others assigned Orders</h2>
+					<ul data-role="listview" data-divider-theme="d">
+						
+					</ul>
+				</div>
+				<div data-role="collapsible">
+					<h2>Unassigned Orders</h2>
+					<ul data-role="listview" data-divider-theme="d">
+						
+					</ul>
+				</div>
+			</div>
+	    </div>
+	    <div data-role="footer" data-position="fixed" >
+	        <div data-role="navbar">
+	            <ul>
+	                <li><a href="#page-2" data-role="tab" data-icon="grid" class="ui-btn-active">Orders List</a></li>
+	                <li><a href="#page-3" data-role="tab" data-icon="grid">Map</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
+	<div id="page-3" data-role="page">
+	    <div data-role="header">
+	        <a href="#" data-icon="arrow-l" data-iconpos="left" 
+	        		data-rel="back" data-transition="slide"
+					data-direction="reverse">Back</a>
+	        <h1>Map</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>Page 3 content</p>
+	    </div>
+	    <div data-role="footer" data-position="fixed">
+	        <div data-role="navbar">
+	            <ul>
+	                <li><a href="#page-2" data-role="tab" data-icon="grid">Orders List</a></li>
+	                <li><a href="#page-3" data-role="tab" data-icon="grid" class="ui-btn-active">Map</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
+	<div data-role="page" id="orderdetail">
+		<div data-role="header">
+	        <a href="#" data-icon="arrow-l" data-iconpos="left" 
+	        		data-rel="back" data-transition="slide"  
+	        		data-direction="reverse">Back</a>
+	        <div data-role="fieldcontain" style="width:500px;">
+				<select name="orderdetail" id="orderdetail" style="width:200px;">
+					<option value="parts">Parts</option>
+					<option value="tasks">Tasks</option>
+					<option value="signature">Signature</option>
+					<option value="camera">Camera</option>
+				</select>
+				
+				<button type="button" data-theme="d" style="width:100px;">Go</button>
+			    
+			</div>
+			
+	    </div>
+	    <div id="orderdetailDiv" data-role="content">
+	       <div data-role="collapsible-set" data-theme="b" data-content-theme="d">
+				<div id="orderinfo" data-role="collapsible">
+					<h2>Order</h2>
+					<div id="orderfields" data-role="fieldcontain" style="height:25%;overflow: auto;">     
+					
+					</div>
+				</div>
+				<div id="customerinfo" data-role="collapsible">
+					<h2>Customer</h2>
+					<div id="customerfields" data-role="fieldcontain">     
+					
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>​
+</body>
+</html>

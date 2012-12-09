@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<ordertype>
+		<ordertype_id>
+		<![CDATA[1290126896255]]>
+		</ordertype_id>
+		<ordertype_name>
+		<![CDATA[order type1]]>
+		</ordertype_name>
+		<extsys_id>
+		<![CDATA[null]]>
+		</extsys_id>
+		<update_time>
+		<![CDATA[null]]>
+		</update_time>
+	</ordertype>
+	<ordertype>
+		<ordertype_id>
+		<![CDATA[123001]]>
+		</ordertype_id>
+		<ordertype_name>
+		<![CDATA[order type2]]>
+		</ordertype_name>
+		<extsys_id>
+		<![CDATA[ ]]>
+		</extsys_id>
+		<update_time>
+		<![CDATA[ null ]]>
+		</update_time>
+	</ordertype>
+	<ordertype>
+		<ordertype_id>
+		<![CDATA[204002]]>
+		</ordertype_id>
+		<ordertype_name>
+		<![CDATA[Repair]]>
+		</ordertype_name>
+		<extsys_id>
+		<![CDATA[ ]]>
+		</extsys_id>
+		<update_time>
+		<![CDATA[ null ]]>
+		</update_time>
+	</ordertype>
+</data>
