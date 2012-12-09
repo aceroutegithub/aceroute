@@ -1,1 +1,0 @@
-Ext.AceRoute.controller.LoginController=Ext.AceRoute.controller.Controller.extend({view:null,_selfRef:null,store:null,isMapRenderedOnAddressClick:null,loginView:null,init:function(){this._super();this.loginView=new Ext.AceRoute.view.LoginView(this);}});

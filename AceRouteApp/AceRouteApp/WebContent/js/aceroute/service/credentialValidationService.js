@@ -1,1 +1,0 @@
-Ext.ns("Ext.AceRoute.service");Ext.AceRoute.service.CredentialValidationService=Class.extend({init:function(){this.initialzed=true;},startService:function(){}});
